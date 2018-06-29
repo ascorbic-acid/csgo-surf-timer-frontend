@@ -1,0 +1,32 @@
+<div class="full">
+  <div class="row ">
+    <div class="col-md-12">
+      <table class="table table-lg table-hover">
+        <thead class="mdb-color darken-3">
+          <tr class="text-white">
+            <th>#</th>
+            <th>Server Name</th>
+            <th>Server IP</th>
+            <th>Map</th>
+            <th>Online Players</th>
+            <th>Connect</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let server of serversInfo; index as i">
+            <th scope="row">{{i+1}}</th>
+            <td>{{server.serverName}}</td>
+            <td>{{server.serverIP}}</td>
+            <td>{{server.serverMap}}</td>
+            <td>{{server.serverOnlinePlayers}}/{{server.serverMaxPlayers}}</td>
+            <td>
+              <button type="button" class="btn btn-sm btn-dark waves-effect waves-light" (click)="steamConnect(server.serverIP)">
+                <i class="fa fa-steam left"></i> Connect</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>

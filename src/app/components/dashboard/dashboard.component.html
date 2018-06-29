@@ -1,0 +1,169 @@
+<!-- Heading -->
+<div class="card mb-4 wow fadeIn">
+
+  <!--Card content-->
+  <div class="card-body d-sm-flex justify-content-between">
+
+    <h4 class="mb-sm-0 pt-3">
+      <a href="https://mdbootstrap.com/material-design-for-bootstrap/" target="_blank">Home Page</a>
+      <span>/</span>
+      <span>Dashboard</span>
+    </h4>
+
+    <form class="d-flex md-form justify-content-center">
+      <!-- Default input -->
+      <input type="search" placeholder="Type your query" aria-label="Search" class="form-control">
+      <button class="btn btn-primary btn-sm my-0 p" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<stats-card></stats-card>
+
+<!--Grid row-->
+<div class="row wow fadeIn">
+
+  <!--Grid column-->
+  <div class="col-md-3 mb-3">
+
+    <!--Card 1-->
+    <div class="card">
+
+      <!--Card content-->
+      <div class="card-body">
+        <h5 class="card-title card-styls">Most World Records</h5>
+        <!-- Table  -->
+        <table class="table table-sm table-hover">
+          <!-- Table head -->
+          <thead class="mdb-color darken-3">
+            <tr class="text-white">
+              <th>#</th>
+              <th>Player</th>
+              <th>WRs</th>
+            </tr>
+          </thead>
+          <!-- Table head -->
+
+          <!-- Table body -->
+          <tbody>
+            <tr *ngFor="let entry of most_word_records; index as i">
+              <th>{{i+1}}</th>
+              <td class="text-primary font-weight-bold">{{entry.name}}</td>
+              <td class="text-success font-weight-bold">{{entry['COUNT(*)']}}</td>
+            </tr>
+          </tbody>
+          <!-- Table body -->
+        </table>
+        <!-- Table  -->
+      </div>
+
+  </div>
+
+  </div>
+
+  <div class="col-md-3 mb-3">
+      <!--Card 2-->
+      <div class="card">
+
+          <!--Card content-->
+          <div class="card-body">
+            <h5 class="card-title card-styls">Most Points</h5>
+            <!-- Table  -->
+            <table class="table table-sm table-hover">
+              <!-- Table head -->
+              <thead class="mdb-color darken-3">
+                <tr class="text-white">
+                  <th>#</th>
+                  <th>Player</th>
+                  <th>Points</th>
+                </tr>
+              </thead>
+              <!-- Table head -->
+    
+              <!-- Table body -->
+              <tbody>
+                <tr *ngFor="let entry of most_points; index as i">
+                  <th scope="row">{{i+1}}</th>
+                  <td class="text-primary font-weight-bold">{{entry.lastname}}</td>
+                  <td class="text-success font-weight-bold">{{entry.points}}</td>
+                </tr>
+              </tbody>
+              <!-- Table body -->
+            </table>
+            <!-- Table  -->
+          </div>
+    
+      </div>
+</div>
+
+<div class="col-md-3 mb-3">
+      <!--Card 3-->
+      <div class="card">
+
+          <!--Card content-->
+          <div class="card-body">
+            <h5 class="card-title card-styls">Top Maps</h5>
+            <!-- Table  -->
+            <table class="table table-sm table-hover">
+              <!-- Table head -->
+              <thead class="mdb-color darken-3">
+                <tr class="text-white">
+                  <th>#</th>
+                  <th>Map</th>
+                  <th>Records</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let entry of top_maps; index as i">
+                  <th scope="row">{{i+1}}</th>
+                  <td class="text-primary font-weight-bold">{{entry.map}}</td>
+                  <td class="text-success font-weight-bold">{{entry['COUNT(*)']}}</td>
+                </tr>
+              </tbody>
+
+            </table>
+            <!-- Table  -->
+          </div>
+    
+      </div>
+</div>
+
+<div class="col-md-3 mb-3">
+  <!--Card 4-->
+  <div class="card">
+
+      <!--Card content-->
+      <div class="card-body">
+        <h5 class="card-title card-styls">New Maps</h5>
+        <!-- Table  -->
+        <table class="table table-sm table-hover">
+          <!-- Table head -->
+          <thead class="mdb-color darken-3">
+            <tr class="text-white">
+              <th>#</th>
+              <th>Map</th>
+              <th>Records</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let entry of new_maps; index as i">
+              <th scope="row">{{i+1}}</th>
+              <td class="text-primary font-weight-bold">{{entry.map_name}}</td>
+              <td class="text-success font-weight-bold">{{entry.map_record}}</td>
+            </tr>
+          </tbody>
+
+        </table>
+        <!-- Table  -->
+      </div>
+
+  </div>
+</div>
+
+
+</div>
