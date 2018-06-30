@@ -121,7 +121,7 @@
               <tbody>
                 <tr *ngFor="let entry of top_maps; index as i">
                   <th scope="row">{{i+1}}</th>
-                  <td class="text-primary font-weight-bold">{{entry.map}}</td>
+                  <td class="text-primary font-weight-bold">{{entry.map | slice:0:15}}...</td>
                   <td class="text-success font-weight-bold">{{entry['COUNT(*)']}}</td>
                 </tr>
               </tbody>

@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes.service';
+// mport { DropdownModule, WavesModule } from 'angular-bootstrap-md'
 
 import { ComponentsModule } from './components/components.module';
 import { SharedModule } from './shared/shared.module';
@@ -13,7 +14,8 @@ import { SharedModule } from './shared/shared.module';
 // main layout
 import { NavigationModule } from './main-layout/navigation/navigation.module';
 //drectives area
-import { DropdownModule } from './directives/dropdown/dropdown.module';
+// import { DropdownModule } from './directives/dropdown/dropdown.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,6 @@ import { DropdownModule } from './directives/dropdown/dropdown.module';
     ComponentsModule,
     FormsModule, 
     ReactiveFormsModule,
-    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent],

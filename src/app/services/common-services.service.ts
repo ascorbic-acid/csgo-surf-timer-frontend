@@ -36,4 +36,21 @@ export class CommonServices {
     const api = "http://localhost:3000/timer-api/dashboard/new-maps";
     return this.http.get(api, httpOptions);
   }
+
+  // infocards query area
+  queryTopWorldRecordInfoCard() {
+    const api = 'http://localhost:3000/timer-api/dashboard/infocards?cardtype=topworldrecord';
+    return this.http.get(api, httpOptions);
+
+  }
+  queryTopPointsInfoCard() {
+    const api = 'http://localhost:3000/timer-api/dashboard/infocards?cardtype=toppoints';
+    return this.http.get(api, httpOptions);
+
+  }
+  queryMapTopInfoCard() {
+    const api = 'http://localhost:3000/timer-api/dashboard/infocards?cardtype=maptop';
+    return this.http.get(api, httpOptions);
+
+  }
 }

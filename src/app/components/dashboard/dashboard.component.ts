@@ -54,6 +54,7 @@ export class DashboardComponent implements OnInit, AfterContentInit {
     }, (err) => {
       throw err;
     });
+
   }
   
 
