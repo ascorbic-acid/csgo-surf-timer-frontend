@@ -1,13 +1,11 @@
 
-import { Map1Component } from './components/maps/map1/map1.component';
-import { ModalsComponent } from './components/modals/modals.component';
-import { BasicTableComponent } from './components/tables/basic-table/basic-table.component';
-import { Profile1Component } from './components/profile/profile1/profile1.component';
+import { MapTopComponent } from './components/maptop/maptop.component';
 import { RouterModule, Route } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PlayerServerStatsComponent } from './components/player-server-stats/player-server-stats.component';
+import { TopPlayersPointsComponent } from './components/top-players-points/top-players-points.component';
 
 
 const routes: Route[] = [
@@ -21,24 +19,13 @@ const routes: Route[] = [
     path: 'status',
     component: PlayerServerStatsComponent
   },
-  { path: 'profiles', children:
-    [
-      { path: 'profile1', component: Profile1Component },
-    ]
+  { 
+    path: 'maptop', component: MapTopComponent
   },
-  { path: 'tables', children:
-    [
-      { path: 'table1', component: BasicTableComponent },
-    ]
+  {
+    path: 'topbypoints', component: TopPlayersPointsComponent
   },
-  { path: 'maps', children:
-    [
-      { path: 'map1', component: Map1Component},
-    ]
-  },
-
-  { path: 'modals', component: ModalsComponent},
-  { path: '**', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent }
 
 ];
 

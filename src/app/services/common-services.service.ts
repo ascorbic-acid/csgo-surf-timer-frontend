@@ -53,4 +53,15 @@ export class CommonServices {
     return this.http.get(api, httpOptions);
 
   }
+  // maptop page
+  getViewRecords(map, style, track){
+    const api = `http://localhost:3000/timer-api/maptop?map=${map}&style=${style}&track=${track}`;
+    return this.http.get(api, httpOptions);
+  }
+
+  // Top Players By points
+  getTopPlayersByPoints(){
+    const api = `http://localhost:3000/timer-api/maptop/topby?by=points`;
+    return this.http.get(api, httpOptions);
+  }
 }

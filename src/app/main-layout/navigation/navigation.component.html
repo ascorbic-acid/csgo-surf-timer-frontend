@@ -84,7 +84,7 @@
                 <i class="fa fa-pie-chart mr-3"></i>Dashboard
             </a>
             <a routerLink="status" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
-                <i class="fa fa-pie-chart mr-3"></i>Player/Server Status
+                <i class="fa fa-chart-bar mr-3"></i>Player/Server Status
             </a>
 
             <!-- dropdown options -->
@@ -92,7 +92,7 @@
                 <i class="fas fa-medal mr-3 dropdown-arrow"></i> Top Players</button>
             
             <div *ngIf="dropped" class="dropdown-sidenav">
-                <a routerLink="#" routerLinkActive="active" class="">
+                <a routerLink="topbypoints">
                     <p>&nbsp; &nbsp; &nbsp; By Points</p></a>
 
                 <a routerLink="#" routerLinkActive="active" class="">
@@ -100,7 +100,7 @@
             </div>
 
 
-            <a routerLink="#" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
+            <a routerLink="maptop" routerLinkActive="active" class="list-group-item list-group-item-action waves-effect">
                 <i class="fas fa-medal mr-3"></i> Map Top</a>
 
         </div>

@@ -1,0 +1,38 @@
+<div class="row">
+
+  <div class="col-md-12">
+
+    <section class="form-elegant scrollbar-light-blue">
+      <h5>Top Points</h5>
+      <table class="table table-sm table-hover">
+        <thead class="mdb-color darken-3">
+          <tr class="text-white">
+            <th>#Rank</th>
+            <th>Player</th>
+            <th>Chatrank</th>
+            <th>Points</th>
+            <th>Avg. Rank</th>
+            <th>WRs</th>
+            <th>Records</th>
+            <th>Total FC</th>
+            <th>Last Seen</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let entry of queryInfo; index as i">
+            <td>{{i+1}}</td>
+            <td class="text-primary">{{entry?.lastname}}</td>
+            <td>Gaby</td>
+            <td>{{entry?.points}}</td>
+            <td>{{entry?.count_avgrank}}</td>
+            <td>{{entry?.count_wrs}}</td>
+            <td>{{entry.count_records}}</td>
+            <td>{{entry?.count_finishcount}}</td>
+            <td>{{entry?.lastplay * 1000 | date: 'dd-mm-yyyy'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</div>
