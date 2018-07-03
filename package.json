@@ -1,20 +1,14 @@
 {
   "name": "surf-timer-frontend",
-  "version": "1.0.0",
+  "version": "1.5",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --build-optimizer",
+    "build": "ng build --prod --build-optimizer --aot",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "pre-commit": "ng lint",
-    "build:lib": "gulp --gulpfile gulpfile.lib.js",
-    "pack": "cp -r src/lib/angular-bootstrap-md/scss src/lib/angular-bootstrap-md/font/ src/lib/angular-bootstrap-md/img/ dist && cd dist && npm pack && cd ..",
-    "copy": "cp dist/angular-bootstrap-md-6.* ./",
-    "compile": "npm run build:lib && npm run pack && npm run copy",
-    "version": "sync-json -v --property version --source package.json src/package.json"
+    "e2e": "ng e2e"
   },
   "dependencies": {
     "@agm/core": "~1.0.0-beta.2",

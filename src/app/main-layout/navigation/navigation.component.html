@@ -42,28 +42,20 @@
                         <div class="dropdown">
 
                             <!--Trigger-->
-                            <button class="btn btn-white btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"  style="margin-right: 40px"
-                                aria-expanded="false">About</button>
+                            <button class="btn btn-white btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                                style="margin-right: 40px" aria-expanded="false">About</button>
 
 
                             <!--Menu-->
                             <div class="dropdown-menu dropdown-primary">
-    
-                                
-                                    <a class="dropdown-item" href="https://github.com/imad-abdou/csgo-surf-timer-frontend">Project Home</a>
-                                    <a class="dropdown-item" href="https://github.com/imad-abdou/csgo-surf-timer-frontend/releases">Changelog</a>
-                                    <a class="dropdown-item" href="http://github.com/Zipcore/Timer/issues">Report Bugs</a>
-                                    <a class="dropdown-item" href="http://github.com/Zipcore/Timer">Original Project</a>
-                                
-                                
-                                    <div class="dropdown-divider"></div>
-                                
-                                    <p class="dropdown-item disabled" >Contact Vitamin-C:</p>
-                                    <a class="dropdown-item" href="https://github.com/imad-abdou">
-                                        <i class="fa fa-github"></i> GitHub</a>
-                                    <a class="dropdown-item" href="https://steamcommunity.com/profiles/76561198129375250/">
-                                        <i class="fa fa-steam"></i> Steam</a>
-            
+
+
+                                <a class="dropdown-item" target="blank" href="https://github.com/imad-abdou/csgo-surf-timer-frontend">Project Home</a>
+                                <a class="dropdown-item" target="blank" href="https://github.com/imad-abdou/csgo-surf-timer-frontend/releases">Changelog</a>
+                                <a class="dropdown-item" target="blank" href="https://github.com/imad-abdou/csgo-surf-timer-frontend/issues">Report Bugs</a>
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" target="blank" href="http://github.com/Zipcore/Timer">Original Project</a>
                             </div>
                         </div>
                     </li>
@@ -97,13 +89,15 @@
             <!-- dropdown options -->
             <button class="list-group-item list-group-item-action waves-effect" (click)="dropdownOptions()">
                 <i class="fas fa-medal mr-3 dropdown-arrow"></i> Top Players</button>
-            
+
             <div *ngIf="dropped" class="dropdown-sidenav">
                 <a routerLink="topbypoints">
-                    <p>&nbsp; &nbsp; &nbsp; By Points</p></a>
+                    <p>&nbsp; &nbsp; &nbsp; By Points</p>
+                </a>
 
                 <a routerLink="#" routerLinkActive="active" class="">
-                    <p>&nbsp; &nbsp; &nbsp; By World Records</p></a>
+                    <p>&nbsp; &nbsp; &nbsp; By World Records</p>
+                </a>
             </div>
 
 
