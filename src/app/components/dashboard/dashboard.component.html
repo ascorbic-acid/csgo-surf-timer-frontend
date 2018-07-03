@@ -27,8 +27,8 @@
           <tbody>
             <tr *ngFor="let entry of most_word_records; index as i">
               <th>{{i+1}}</th>
-              <td class="text-primary font-weight-bold">{{entry.name}}</td>
-              <td class="text-success font-weight-bold">{{entry['COUNT(*)']}}</td>
+              <td class="text-primary">{{entry.name}}</td>
+              <td class="text-success">{{entry['COUNT(*)']}}</td>
             </tr>
           </tbody>
           <!-- Table body -->
@@ -63,8 +63,8 @@
               <tbody>
                 <tr *ngFor="let entry of most_points; index as i">
                   <th scope="row">{{i+1}}</th>
-                  <td class="text-primary font-weight-bold">{{entry.lastname}}</td>
-                  <td class="text-success font-weight-bold">{{entry.points}}</td>
+                  <td class="text-primary">{{entry.lastname}}</td>
+                  <td class="text-success">{{entry.points}}</td>
                 </tr>
               </tbody>
               <!-- Table body -->
@@ -95,8 +95,8 @@
               <tbody>
                 <tr *ngFor="let entry of top_maps; index as i">
                   <th scope="row">{{i+1}}</th>
-                  <td class="text-primary font-weight-bold">{{entry.map | slice:0:15}}...</td>
-                  <td class="text-success font-weight-bold">{{entry['COUNT(*)']}}</td>
+                  <td class="text-primary">{{(entry.map .length>16)? (entry.map | slice:0:15)+'..':(entry.map)}}</td>
+                  <td class="text-success">{{entry['COUNT(*)']}}</td>
                 </tr>
               </tbody>
 
@@ -127,8 +127,8 @@
           <tbody>
             <tr *ngFor="let entry of new_maps; index as i">
               <th scope="row">{{i+1}}</th>
-              <td class="text-primary font-weight-bold">{{entry.map_name}}</td>
-              <td class="text-success font-weight-bold">{{entry.map_record}}</td>
+              <td class="text-primary">{{(entry.map_name.length>16)? (entry.map_name | slice:0:15)+'..':(entry.map_name)}}</td>
+              <td class="text-success">{{entry.map_record}}</td>
             </tr>
           </tbody>
 

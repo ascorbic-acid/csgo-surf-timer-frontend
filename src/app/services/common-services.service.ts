@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class CommonServices {
 
-  static BASE_API = "http://localhost:3000/";
+  static BASE_API = "http://ec2-18-194-220-198.eu-central-1.compute.amazonaws.com:4200/";
 
   constructor(private http: HttpClient) { }
   // get stats/players servers service
