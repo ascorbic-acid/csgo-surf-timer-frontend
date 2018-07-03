@@ -32,21 +32,23 @@ export class StatsCardComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit() {
+
+
+
     // topworldrecords 
-    this.cs.queryTopWorldRecordInfoCard().subscribe((data: Object) => {
-      this.infoCards.topworldrecord.total_players = StatsCardComponent.kFormatter(data['total_players']);
-      this.infoCards.topworldrecord.total_records = StatsCardComponent.kFormatter(data['total_records']);
+    this.cs.queryInfoCards().subscribe((data: infoCards) => {
+      // Players card
+      this.infoCards.topworldrecord.total_players = StatsCardComponent.kFormatter(data.topworldrecord.total_players);
+      this.infoCards.topworldrecord.total_records = StatsCardComponent.kFormatter(data.topworldrecord.total_records);
+      // Points card
+      this.infoCards.toppoints.total_points = StatsCardComponent.kFormatter(data.toppoints.total_points);
+      this.infoCards.toppoints.avg_points = StatsCardComponent.kFormatter(data.toppoints.avg_points);
+      // Maps card
+      this.infoCards.maptop.total_maps = data.maptop.total_maps;
+      this.infoCards.maptop.total_bonusmaps = data.maptop.total_bonusmaps;
+
     })
-    // toppoints  
-    this.cs.queryTopPointsInfoCard().subscribe((data: Object) => {
-      this.infoCards.toppoints.total_points = StatsCardComponent.kFormatter(data['total_points']),
-        this.infoCards.toppoints.avg_points = StatsCardComponent.kFormatter(data['avg_points'])
-    })
-    // maptop  
-    this.cs.queryMapTopInfoCard().subscribe((data: Object) => {
-      this.infoCards.maptop.total_maps = StatsCardComponent.kFormatter(data['total_points']),
-        this.infoCards.maptop.total_bonusmaps = StatsCardComponent.kFormatter(data['avg_points'])
-    })
+    // fill Status info card from players/servers api
     this.cs.getStats().subscribe((data: Array<any>) => {
       let total_online_players = 0;
 
